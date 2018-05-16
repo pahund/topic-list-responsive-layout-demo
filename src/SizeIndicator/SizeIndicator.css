@@ -1,0 +1,72 @@
+.SizeIndicator {
+  font-size: 0.7em;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+}
+
+/* XS (phone portrait) */
+@media (max-width: 480px) {
+  .SizeIndicator .xs {
+    display: block;
+  }
+  .SizeIndicator .s,
+  .SizeIndicator .m,
+  .SizeIndicator .l,
+  .SizeIndicator .xl {
+    display: none;
+  }
+}
+
+/* S (small tablet portrait) */
+@media (min-width: 480.02px) and (max-width: 640px) {
+  .SizeIndicator .s {
+    display: block;
+  }
+  .SizeIndicator .xs,
+  .SizeIndicator .m,
+  .SizeIndicator .l,
+  .SizeIndicator .xl {
+    display: none;
+  }
+}
+
+/* M (tablet portrait) */
+@media (min-width: 640.02px) and (max-width: 1000px) {
+  .SizeIndicator .m {
+    display: block;
+  }
+  .SizeIndicator .xs,
+  .SizeIndicator .s,
+  .SizeIndicator .l,
+  .SizeIndicator .xl {
+    display: none;
+  }
+}
+
+/* L (tablet landscape) */
+@media (min-width: 1000.02px) and (max-width: 1290px) {
+  .SizeIndicator .l {
+    display: block;
+  }
+  .SizeIndicator .xs,
+  .SizeIndicator .s,
+  .SizeIndicator .m,
+  .SizeIndicator .xl {
+    display: none;
+  }
+}
+
+/* XL (desktop) */
+@media (min-width: 1290.02px) {
+  .SizeIndicator .xl {
+    display: block;
+  }
+  .SizeIndicator .xs,
+  .SizeIndicator .s,
+  .SizeIndicator .m,
+  .SizeIndicator .l {
+    display: none;
+  }
+}

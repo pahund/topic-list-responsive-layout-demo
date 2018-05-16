@@ -1,0 +1,16 @@
+.Skyscraper {
+  background-color: hotpink;
+  height: 600px;
+}
+
+@media (max-width: 1719.98px) {
+  .Skyscraper {
+    width: 160px;
+  }
+}
+
+@media (min-width: 1720px) {
+  .Skyscraper {
+    width: 300px;
+  }
+}

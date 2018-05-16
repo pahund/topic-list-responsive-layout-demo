@@ -1,0 +1,17 @@
+.Box {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.Box .title {
+  text-transform: uppercase;
+}
+
+.Box .size {
+  font-size: 0.8em;
+}

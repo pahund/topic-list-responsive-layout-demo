@@ -1,0 +1,16 @@
+.FireplaceColumns {
+  display: flex;
+  justify-content: center;
+}
+
+/* XS (phone portrait) */
+/* S (small tablet portrait) */
+/* M (tablet portrait) */
+/* L (tablet landscape) */
+@media (max-width: 1439.98px) {
+  .FireplaceColumns > :first-child,
+  .FireplaceColumns > :last-child {
+    display: none;
+  }
+}
+
