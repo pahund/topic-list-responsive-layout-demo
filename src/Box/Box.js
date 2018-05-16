@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 import './Box.css';
-import debounce from '../util/debounce';
+import { debounce } from '../util';
+import PropTypes from 'prop-types';
 
 class Box extends Component {
     constructor(props) {
         super(props);
         this.state = {};
-        window.addEventListener('resize', debounce(() => this.updateDimensions(), 100, false), false);
+        this.divElement = React.createRef();
     }
     componentDidMount() {
-        this.updateDimensions();
+        window.addEventListener('resize', debounce(() => this.updateDimensions(), 100, false), false);
     }
 
     updateDimensions() {
         const { divElement } = this;
-        if (!divElement) {
-            return;
-        }
         this.setState({
             width: divElement.clientWidth,
             height: divElement.clientHeight
@@ -27,7 +25,7 @@ class Box extends Component {
         const { className, style, title } = this.props;
         const { width, height } = this.state;
         return (
-            <div className={`Box ${className}`} style={style} ref={divElement => (this.divElement = divElement)}>
+            <div className={`Box ${className}`} style={style} ref={this.divElement}>
                 <div>
                     <div className="title">{title}</div>
                     {width &&
@@ -41,5 +39,11 @@ class Box extends Component {
         );
     }
 }
+
+Box.propTypes = {
+    className: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    style: PropTypes.object
+};
 
 export default Box;

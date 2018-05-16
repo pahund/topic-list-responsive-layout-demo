@@ -1,5 +1,439 @@
+:root {
+  --gutter-width: 16px;
+  --gutter-height: 16px;
+  --color-ad: hotpink;
+  --color-nav: lime;
+  --color-main: turquoise;
+  --color-side: teal;
+  --billboard-width: 970px;
+  --billboard-height: 250px;
+  --fireplace-banner-height: 90px;
+  --fireplace-banner-width: 1120px;
+  --banner-width: 320px;
+  --banner-height: 50px;
+  --sky-wide-width: 300px;
+  --sky-width: 160px;
+  --sky-height: 600px;
+  --main-content-width: 772px;
+  --main-content-height: 800px;
+  --sidebar-width: 300px;
+  --sidebar-height: 800px;
+  --super-banner-width: 728px;
+  --super-banner-height: 90px;
+  --full-banner-width: 468px;
+  --full-banner-height: 60px;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
-  padding: 0;
 }
+
+.App .Header {
+  background-color: var(--color-nav);
+  grid-area: header;
+}
+
+.App .SkyscraperLeft {
+  background-color: var(--color-ad);
+  grid-area: skyscraper-left;
+}
+
+.App .SkyscraperRight {
+  background-color: var(--color-ad);
+  grid-area: skyscraper-right;
+}
+
+.App .MainContent {
+  background-color: var(--color-main);
+  grid-area: main-content;
+}
+
+.App .Sidebar {
+  background-color: var(--color-side);
+  grid-area: sidebar;
+}
+
+.App .Sidebar2 {
+  background-color: var(--color-side);
+  grid-area: sidebar2;
+}
+
+
+.App .Banner {
+  background-color: var(--color-ad);
+  grid-area: superbanner;
+}
+
+.App .Footer {
+  background-color: var(--color-nav);
+  grid-area: footer;
+}
+
+/* Screen Size XS → phone */
+@media (max-width: 480px) {
+  .App {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--banner-height)
+      var(--gutter-height)
+      var(--main-content-height)
+      var(--gutter-height)
+      var(--sidebar-height)
+      var(--gutter-height)
+      235px;
+    grid-template-areas:
+      "header"
+      "."
+      "superbanner"
+      "."
+      "main-content"
+      "."
+      "sidebar"
+      "."
+      "footer"
+  }
+  .App .Sidebar2 {
+    display: none;
+  }
+  .App .SkyscraperLeft {
+    display: none;
+  }
+  .App .SkyscraperRight {
+    display: none;
+  }
+  .App .Banner {
+    justify-self: center;
+    width: var(--banner-width);
+  }
+}
+
+/* Screen Size S → small tablet */
+@media (min-width: 480.02px) and (max-width: 640px) {
+  .App {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--full-banner-height)
+      var(--gutter-height)
+      var(--main-content-height)
+      var(--gutter-height)
+      var(--sidebar-height)
+      var(--gutter-height)
+      235px;
+    grid-template-areas:
+      "header"
+      "."
+      "superbanner"
+      "."
+      "main-content"
+      "."
+      "sidebar"
+      "."
+      "footer"
+  }
+  .App .Sidebar2 {
+    display: none;
+  }
+  .App .SkyscraperLeft {
+    display: none;
+  }
+  .App .SkyscraperRight {
+    display: none;
+  }
+  .App .Banner {
+    justify-self: center;
+    width: var(--full-banner-width);
+  }
+}
+
+/* Screen Size M → tablet portrait */
+@media (min-width: 640.02px) and (max-width: 727.98px) {
+  .App {
+    display: grid;
+    grid-template-columns:
+      32px
+      auto
+      var(--gutter-width)
+      auto
+      32px;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--full-banner-height)
+      var(--gutter-height)
+      var(--main-content-height)
+      var(--gutter-height)
+      calc(var(--sidebar-height) / 2)
+      var(--gutter-height)
+      235px;
+    grid-template-areas:
+      "header header header header header"
+      ". . . . ."
+      "superbanner superbanner superbanner superbanner superbanner"
+      ". . . . ."
+      ". main-content main-content main-content ."
+      ". . . . ."
+      ". sidebar . sidebar2 ."
+      ". . . . ."
+      "footer footer footer footer footer "
+  }
+  .App .SkyscraperLeft {
+    display: none;
+  }
+  .App .SkyscraperRight {
+    display: none;
+  }
+  .App .Banner {
+    justify-self: center;
+    width: var(--full-banner-width);
+  }
+}
+
+@media (min-width: 728px) and (max-width: 969.98px) {
+  .App {
+    display: grid;
+    grid-template-columns:
+      32px
+      auto
+      var(--gutter-width)
+      auto
+      32px;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--super-banner-height)
+      var(--gutter-height)
+      var(--main-content-height)
+      var(--gutter-height)
+      calc(var(--sidebar-height) / 2)
+      var(--gutter-height)
+      235px;
+    grid-template-areas:
+      "header header header header header"
+      ". . . . ."
+      "superbanner superbanner superbanner superbanner superbanner"
+      ". . . . ."
+      ". main-content main-content main-content ."
+      ". . . . ."
+      ". sidebar . sidebar2 ."
+      ". . . . ."
+      "footer footer footer footer footer "
+  }
+  .App .SkyscraperLeft {
+    display: none;
+  }
+  .App .SkyscraperRight {
+    display: none;
+  }
+  .App .Banner {
+    justify-self: center;
+    width: var(--super-banner-width);
+  }
+}
+
+@media (min-width: 970px) and (max-width: 1000px) {
+  .App {
+    display: grid;
+    grid-template-columns:
+      32px
+      auto
+      var(--gutter-width)
+      auto
+      32px;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--billboard-height)
+      var(--gutter-height)
+      var(--main-content-height)
+      var(--gutter-height)
+      calc(var(--sidebar-height) / 2)
+      var(--gutter-height)
+      235px;
+    grid-template-areas:
+      "header header header header header"
+      ". . . . ."
+      "superbanner superbanner superbanner superbanner superbanner"
+      ". . . . ."
+      ". main-content main-content main-content ."
+      ". . . . ."
+      ". sidebar . sidebar2 ."
+      ". . . . ."
+      "footer footer footer footer footer "
+  }
+  .App .SkyscraperLeft {
+    display: none;
+  }
+  .App .SkyscraperRight {
+    display: none;
+  }
+  .App .Banner {
+    justify-self: center;
+    width: var(--billboard-width);
+  }
+}
+
+/* Screen Size L → tablet landscape, 13" laptop */
+@media (min-width: 1000.02px) and (max-width: 1290px) {
+  .App {
+    display: grid;
+    grid-template-columns:
+      64px
+      auto
+      var(--gutter-width)
+      var(--sidebar-width)
+      64px;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--billboard-height)
+      var(--gutter-height)
+      var(--main-content-height)
+      var(--gutter-height)
+      235px;
+    grid-template-areas: 
+      "header header header header header"
+      ". . . . ."
+      "superbanner superbanner superbanner superbanner superbanner"
+      ". . . . ."
+      ". main-content . sidebar ."
+      ". . . . ."
+      "footer footer footer footer footer";
+  }
+  .App .Sidebar2 {
+    display: none;
+  }
+  .App .SkyscraperLeft {
+    display: none;
+  }
+  .App .SkyscraperRight {
+    display: none;
+  }
+  .App .Banner {
+    justify-self: center;
+    width: var(--billboard-width);
+  }
+}
+
+/* Screen Size XL → 15" laptop */
+@media (min-width: 1290.02px) and (max-width: 1439.98px) {
+  .App {
+    display: grid;
+    grid-template-columns:
+      auto
+      var(--main-content-width)
+      var(--gutter-width)
+      var(--sidebar-width)
+      auto;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--billboard-height)
+      var(--gutter-height)
+      var(--main-content-height)
+      var(--gutter-height)
+      235px;
+    grid-template-areas: 
+      "header header header header header"
+      ". . . . ."
+      ". superbanner superbanner superbanner ."
+      ". . . . ."
+      ". main-content . sidebar ."
+      ". . . . ."
+      "footer footer footer footer footer";
+  }
+  .App .Sidebar2 {
+    display: none;
+  }
+  .App .SkyscraperLeft {
+    display: none;
+  }
+  .App .SkyscraperRight {
+    display: none;
+  }
+  .App .Banner {
+    justify-self: center;
+    width: var(--billboard-width);
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1719.98px) {
+  .App {
+    display: grid;
+    grid-template-columns:
+      auto
+      var(--sky-width)
+      var(--gutter-width)
+      var(--main-content-width)
+      var(--gutter-width)
+      var(--sidebar-width)
+      var(--gutter-width)
+      var(--sky-width)
+      auto;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--fireplace-banner-height)
+      var(--gutter-height)
+      calc(var(--sky-height) - var(--fireplace-banner-height) - var(--gutter-height))
+      calc(var(--main-content-height) - var(--sky-height) + var(--fireplace-banner-height) + var(--gutter-height))
+      var(--gutter-height)
+      235px;
+    grid-template-areas: 
+      "header header header header header header header header header"
+      ". . . . . . . . ."
+      ". skyscraper-left superbanner superbanner superbanner superbanner superbanner skyscraper-right ."
+      ". skyscraper-left . . . . . skyscraper-right ."
+      ". skyscraper-left . main-content . sidebar . skyscraper-right ."
+      ". . . main-content . sidebar . . ."
+      ". . . . . . . . ."
+      "footer footer footer footer footer footer footer footer footer";
+  }
+  .App .Sidebar2 {
+    display: none;
+  }
+}
+
+@media (min-width: 1720px) {
+  .App {
+    display: grid;
+    grid-template-columns:
+      auto
+      var(--sky-wide-width)
+      var(--gutter-width)
+      var(--main-content-width)
+      var(--gutter-width)
+      var(--sidebar-width)
+      var(--gutter-width)
+      var(--sky-wide-width)
+      auto;
+    grid-template-rows:
+      80px
+      var(--gutter-height)
+      var(--fireplace-banner-height)
+      var(--gutter-height)
+      calc(var(--sky-height) - var(--fireplace-banner-height) - var(--gutter-height))
+      calc(var(--main-content-height) - var(--sky-height) + var(--fireplace-banner-height) + var(--gutter-height))
+      var(--gutter-height)
+      235px;
+    grid-template-areas: 
+      "header header header header header header header header header"
+      ". . . . . . . . ."
+      ". skyscraper-left superbanner superbanner superbanner superbanner superbanner skyscraper-right ."
+      ". skyscraper-left . . . . . skyscraper-right ."
+      ". skyscraper-left . main-content . sidebar . skyscraper-right ."
+      ". . . main-content . sidebar . . ."
+      ". . . . . . . . ."
+      "footer footer footer footer footer footer footer footer footer";
+  }
+  .App .Sidebar2 {
+    display: none;
+  }
+}
+

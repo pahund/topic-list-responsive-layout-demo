@@ -1,28 +1,20 @@
 import React, { Fragment } from 'react';
-import SuperBanner from '../SuperBanner';
-import Skyscraper from '../Skyscraper';
-import FireplaceColumns from '../FireplaceColumns';
-import ActionBar from '../ActionBar';
-import Header from '../Header';
-import SizeIndicator from '../SizeIndicator';
-import MiddleColumn from '../MiddleColumn';
-import MainContent from '../MainContent';
 import './App.css';
+import Box from '../Box';
+import SizeIndicator from '../SizeIndicator';
 
 export default () => (
     <Fragment>
-        <Header />
-        <ActionBar />
-        <FireplaceColumns>
-            <Skyscraper />
-            <div>
-                <SuperBanner />
-                <MiddleColumn>
-                    <MainContent />
-                </MiddleColumn>
-            </div>
-            <Skyscraper />
-        </FireplaceColumns>
         <SizeIndicator />
+        <div className="App">
+            <Box className="Header" title="Header" />
+            <Box className="SkyscraperLeft" title="Sky" />
+            <Box className="SkyscraperRight" title="Sky" />
+            <Box className="Banner" title="Banner" />
+            <Box className="MainContent" title="Main Content" />
+            <Box className="Sidebar" title="Sidebar" />
+            <Box className="Sidebar2" title="Sidebar" />
+            <Box className="Footer" title="Footer" />
+        </div>
     </Fragment>
 );
