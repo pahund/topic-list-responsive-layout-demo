@@ -10,14 +10,19 @@ class Box extends Component {
         this.divElement = React.createRef();
     }
     componentDidMount() {
+        this.updateDimensions();
         window.addEventListener('resize', debounce(() => this.updateDimensions(), 100, false), false);
     }
 
     updateDimensions() {
-        const { divElement } = this;
+        const {
+            divElement: {
+                current: { clientWidth: width, clientHeight: height }
+            }
+        } = this;
         this.setState({
-            width: divElement.clientWidth,
-            height: divElement.clientHeight
+            width,
+            height
         });
     }
 
