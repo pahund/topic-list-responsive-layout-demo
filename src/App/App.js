@@ -11,7 +11,7 @@ export default () => (
             <Box className="SkyscraperLeft" title="Sky" />
             <Box className="SkyscraperRight" title="Sky" />
             <Box className="Banner" title="Banner" />
-            <Box className="MainContent" title="Main Content" />
+            <Box className="MainContent" title="Main" />
             <Box className="Sidebar" title="Sidebar" />
             <Box className="Sidebar2" title="Sidebar" />
             <Box className="Footer" title="Footer" />
