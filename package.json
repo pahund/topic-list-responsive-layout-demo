@@ -1,8 +1,9 @@
 {
-  "name": "topic-list-responsive-layout",
+  "name": "topic-list-responsive-layout-demo",
   "version": "1.0.0",
   "description": "A small demo application showing how various screen sized affect the layout of the topic list page on MOTOR-TALK",
   "keywords": [],
+  "homepage": "https://pages.github.corp.ebay.com/MT/topic-list-responsive-layout-demo",
   "main": "src/index.js",
   "dependencies": {
     "prop-types": "^15.6.1",
@@ -16,6 +17,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.8.2",
+    "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.0",
     "prettier": "^1.12.1"
@@ -27,7 +29,9 @@
     "eject": "react-scripts eject",
     "eslint": "eslint '**/*.js' --fix",
     "prettier": "prettier '**/*.js' --write",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "linters": {
