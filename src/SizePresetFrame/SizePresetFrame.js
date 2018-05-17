@@ -107,11 +107,7 @@ class SizePresetFrame extends Component {
                         className="content"
                         style={{
                             width: preset ? calculateViewportWidth(preset) : window.innerWidth,
-                            height: preset
-                                ? fullHeight
-                                    ? preset.screen.fullHeight
-                                    : preset.screen.height
-                                : window.innerHeight,
+                            height: preset ? (fullHeight ? preset.screen.fullHeight : preset.screen.height) : 3000,
                             border: 0
                         }}
                         src="./main.html"
