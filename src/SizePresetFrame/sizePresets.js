@@ -37,7 +37,7 @@ const scrollbar = {
 
 export default {
     phoneS: {
-        name: 'Phone 4"',
+        name: 'Phone 4" [1]',
         scrollbar: {
             active: false
         },
@@ -47,7 +47,7 @@ export default {
         }
     },
     phoneL: {
-        name: 'Phone 5.5"',
+        name: 'Phone 5.5" [2]',
         scrollbar: {
             active: false
         },
@@ -57,7 +57,7 @@ export default {
         }
     },
     tabletS: {
-        name: 'Tablet 7"',
+        name: 'Tablet 7" [3]',
         scrollbar: {
             active: false
         },
@@ -67,7 +67,7 @@ export default {
         }
     },
     tabletLPort: {
-        name: 'Tablet 9.7" Portrait',
+        name: 'Tablet 9.7" Portrait [4]',
         scrollbar: {
             active: false
         },
@@ -77,7 +77,7 @@ export default {
         }
     },
     tabletLLand: {
-        name: 'Tablet 9.7" Landscape',
+        name: 'Tablet 9.7" Landscape [5]',
         scrollbar: {
             active: false
         },
@@ -87,7 +87,7 @@ export default {
         }
     },
     laptop13winIE: {
-        name: 'Laptop 13" Windows Internet Explorer',
+        name: 'Laptop 13" Windows Internet Explorer [6]',
         scrollbar: {
             active: true,
             width: scrollbar.win
@@ -98,7 +98,7 @@ export default {
         }
     },
     laptop13macSafari: {
-        name: 'Laptop 13" MacOS Safari',
+        name: 'Laptop 13" MacOS Safari [7]',
         scrollbar: {
             active: true,
             width: scrollbar.mac
@@ -109,7 +109,7 @@ export default {
         }
     },
     laptop13winEdge: {
-        name: 'Laptop 13" Windows Edge',
+        name: 'Laptop 13" Windows Edge [8]',
         scrollbar: {
             active: true,
             width: scrollbar.edge
@@ -120,7 +120,7 @@ export default {
         }
     },
     laptop15winIE: {
-        name: 'Laptop 15" Windows Internet Explorer',
+        name: 'Laptop 15" Windows Internet Explorer [9]',
         scrollbar: {
             active: true,
             width: scrollbar.win
@@ -131,7 +131,7 @@ export default {
         }
     },
     laptop15macSafari: {
-        name: 'Laptop 15" MacOS Safari',
+        name: 'Laptop 15" MacOS Safari [0]',
         scrollbar: {
             active: true,
             width: scrollbar.mac
@@ -142,7 +142,7 @@ export default {
         }
     },
     laptop15winEdge: {
-        name: 'Laptop 15" Windows Edge',
+        name: 'Laptop 15" Windows Edge [ß]',
         scrollbar: {
             active: true,
             width: scrollbar.edge

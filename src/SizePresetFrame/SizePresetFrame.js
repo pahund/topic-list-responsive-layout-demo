@@ -87,11 +87,11 @@ class SizePresetFrame extends Component {
                 <div className="top">
                     <label htmlFor="preset">Size Preset:</label>
                     <select id="preset" onChange={this.selectPreset} value={selectedSizePresetId || ''}>
-                        <option>none</option>
+                        <option>none [^]</option>
                         {renderOptions()}
                     </select>
                     <div className="spacer" />
-                    <label htmlFor="full-height">Full Height:</label>
+                    <label htmlFor="full-height">Full Height [´]:</label>
                     <input
                         type="checkbox"
                         checked={this.state.fullHeight}
