@@ -74,6 +74,7 @@ class SizePresetFrame extends Component {
         if (selectedSizePresetId === undefined) {
             return;
         }
+        localStorage.setItem('selectedSizePresetId', selectedSizePresetId);
         this.setState({
             selectedSizePresetId
         });
@@ -108,7 +109,7 @@ class SizePresetFrame extends Component {
                             width: preset ? calculateViewportWidth(preset) : window.innerWidth,
                             height: preset
                                 ? fullHeight
-                                    ? 'calc(100vh - 32px)'
+                                    ? preset.screen.fullHeight
                                     : preset.screen.height
                                 : window.innerHeight,
                             border: 0

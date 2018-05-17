@@ -14,7 +14,7 @@
   --sky-wide-width: 300px;
   --sky-width: 160px;
   --sky-height: 600px;
-  --main-content-width: 772px;
+  --main-content-width: 752px;
   --main-content-height: 800px;
   --sidebar-width: 300px;
   --sidebar-height: 800px;
@@ -317,7 +317,7 @@
 }
 
 /* Screen Size XL → 15" laptop */
-@media (min-width: 1290.02px) and (max-width: 1439.98px) {
+@media (min-width: 1290.02px) and (max-width: 1419.98px) {
   .App {
     display: grid;
     grid-template-columns:
@@ -358,7 +358,7 @@
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1719.98px) {
+@media (min-width: 1420px) and (max-width: 1699.98px) {
   .App {
     display: grid;
     grid-template-columns:
@@ -395,7 +395,7 @@
   }
 }
 
-@media (min-width: 1720px) {
+@media (min-width: 1700px) {
   .App {
     display: grid;
     grid-template-columns:

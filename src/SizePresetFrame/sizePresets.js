@@ -43,7 +43,8 @@ export default {
         },
         screen: {
             width: screen.phoneS.width,
-            height: screen.phoneS.height
+            height: screen.phoneS.height,
+            fullHeight: 2029
         }
     },
     phoneL: {
@@ -53,7 +54,8 @@ export default {
         },
         screen: {
             width: screen.phoneL.width,
-            height: screen.phoneL.height
+            height: screen.phoneL.height,
+            fullHeight: 2029
         }
     },
     tabletS: {
@@ -63,7 +65,8 @@ export default {
         },
         screen: {
             width: screen.tabletS.width,
-            height: screen.tabletS.height
+            height: screen.tabletS.height,
+            fullHeight: 2039
         }
     },
     tabletLPort: {
@@ -73,7 +76,8 @@ export default {
         },
         screen: {
             width: screen.tabletLPort.width,
-            height: screen.tabletLPort.height
+            height: screen.tabletLPort.height,
+            fullHeight: 1669
         }
     },
     tabletLLand: {
@@ -83,7 +87,8 @@ export default {
         },
         screen: {
             width: screen.tabletLLand.width,
-            height: screen.tabletLLand.height
+            height: screen.tabletLLand.height,
+            fullHeight: 1413
         }
     },
     laptop13winIE: {
@@ -94,7 +99,8 @@ export default {
         },
         screen: {
             width: screen.laptop13.width,
-            height: screen.laptop13.height
+            height: screen.laptop13.height,
+            fullHeight: 1413
         }
     },
     laptop13macSafari: {
@@ -105,7 +111,8 @@ export default {
         },
         screen: {
             width: screen.laptop13.width,
-            height: screen.laptop13.height
+            height: screen.laptop13.height,
+            fullHeight: 1413
         }
     },
     laptop13winEdge: {
@@ -116,7 +123,8 @@ export default {
         },
         screen: {
             width: screen.laptop13.width,
-            height: screen.laptop13.height
+            height: screen.laptop13.height,
+            fullHeight: 1413
         }
     },
     laptop15winIE: {
@@ -127,7 +135,8 @@ export default {
         },
         screen: {
             width: screen.laptop15.width,
-            height: screen.laptop15.height
+            height: screen.laptop15.height,
+            fullHeight: 1253
         }
     },
     laptop15macSafari: {
@@ -138,7 +147,8 @@ export default {
         },
         screen: {
             width: screen.laptop15.width,
-            height: screen.laptop15.height
+            height: screen.laptop15.height,
+            fullHeight: 1253
         }
     },
     laptop15winEdge: {
@@ -149,7 +159,8 @@ export default {
         },
         screen: {
             width: screen.laptop15.width,
-            height: screen.laptop15.height
+            height: screen.laptop15.height,
+            fullHeight: 1253
         }
     }
 };
