@@ -86,19 +86,8 @@ export default {
             height: screen.tabletLLand.height
         }
     },
-    laptop13winEdge38: {
-        name: 'Laptop 13" Windows Edge 38',
-        scrollbar: {
-            active: true,
-            width: scrollbar.edge
-        },
-        screen: {
-            width: screen.laptop13.width,
-            height: screen.laptop13.height
-        }
-    },
-    laptop13winIE11: {
-        name: 'Laptop 13" Windows Internet Explorer 11',
+    laptop13winIE: {
+        name: 'Laptop 13" Windows Internet Explorer',
         scrollbar: {
             active: true,
             width: scrollbar.win
@@ -108,8 +97,8 @@ export default {
             height: screen.laptop13.height
         }
     },
-    laptop13macSafari11: {
-        name: 'Laptop 13" MacOS Safari 11',
+    laptop13macSafari: {
+        name: 'Laptop 13" MacOS Safari',
         scrollbar: {
             active: true,
             width: scrollbar.mac
@@ -119,19 +108,19 @@ export default {
             height: screen.laptop13.height
         }
     },
-    laptop15winEdge38: {
-        name: 'Laptop 15" Windows Edge 38',
+    laptop13winEdge: {
+        name: 'Laptop 13" Windows Edge',
         scrollbar: {
             active: true,
             width: scrollbar.edge
         },
         screen: {
-            width: screen.laptop15.width,
-            height: screen.laptop15.height
+            width: screen.laptop13.width,
+            height: screen.laptop13.height
         }
     },
-    laptop15winIE11: {
-        name: 'Laptop 15" Windows Internet Explorer 11',
+    laptop15winIE: {
+        name: 'Laptop 15" Windows Internet Explorer',
         scrollbar: {
             active: true,
             width: scrollbar.win
@@ -141,11 +130,22 @@ export default {
             height: screen.laptop15.height
         }
     },
-    laptop15macSafari11: {
-        name: 'Laptop 15" MacOS Safari 11',
+    laptop15macSafari: {
+        name: 'Laptop 15" MacOS Safari',
         scrollbar: {
             active: true,
             width: scrollbar.mac
+        },
+        screen: {
+            width: screen.laptop15.width,
+            height: screen.laptop15.height
+        }
+    },
+    laptop15winEdge: {
+        name: 'Laptop 15" Windows Edge',
+        scrollbar: {
+            active: true,
+            width: scrollbar.edge
         },
         screen: {
             width: screen.laptop15.width,

@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import sizePresets from './sizePresets';
 import './SizePresetFrame.css';
 
+const keyboardShortcuts = {
+    Digit1: 'phoneS',
+    Digit2: 'phoneL',
+    Digit3: 'tabletS',
+    Digit4: 'tabletLPort',
+    Digit5: 'tabletLLand',
+    Digit6: 'laptop13winIE',
+    Digit7: 'laptop13macSafari',
+    Digit8: 'laptop13winEdge',
+    Digit9: 'laptop15winIE',
+    Digit0: 'laptop15macSafari',
+    Minus: 'laptop15winEdge',
+    IntlBackslash: null
+};
+
 function renderOptions() {
     return Object.keys(sizePresets).map(id => (
         <option value={id} key={`preset${id}`}>
@@ -23,6 +38,11 @@ class SizePresetFrame extends Component {
         };
         this.selectPreset = this.selectPreset.bind(this);
         this.toggleFullHeight = this.toggleFullHeight.bind(this);
+        this.handleKeyboardShortcut = this.handleKeyboardShortcut.bind(this);
+    }
+
+    componentDidMount() {
+        window.addEventListener('keydown', this.handleKeyboardShortcut);
     }
 
     selectPreset({ target: { value: selectedSizePresetId } }) {
@@ -31,6 +51,22 @@ class SizePresetFrame extends Component {
 
     toggleFullHeight() {
         this.setState({ fullHeight: !this.state.fullHeight });
+    }
+
+    handleKeyboardShortcut({ code }) {
+        if (code === 'Equal') {
+            if (this.state.selectedSizePresetId) {
+                this.toggleFullHeight();
+            }
+            return;
+        }
+        const selectedSizePresetId = keyboardShortcuts[code];
+        if (selectedSizePresetId === undefined) {
+            return;
+        }
+        this.setState({
+            selectedSizePresetId
+        });
     }
 
     render() {
@@ -48,6 +84,7 @@ class SizePresetFrame extends Component {
                     <label htmlFor="full-height">Full Height:</label>
                     <input
                         type="checkbox"
+                        checked={this.state.fullHeight}
                         id="full-height"
                         onChange={this.toggleFullHeight}
                         disabled={preset === null}
