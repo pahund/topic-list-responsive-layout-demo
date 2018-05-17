@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 import Box from '../Box';
 import SizeIndicator from '../SizeIndicator';
+import SizePresetFrame from '../SizePresetFrame';
 
 export default () => (
-    <Fragment>
+    <SizePresetFrame>
         <SizeIndicator />
         <div className="App">
             <Box className="Header" title="Header" />
@@ -16,5 +17,5 @@ export default () => (
             <Box className="Sidebar2" title="Sidebar" />
             <Box className="Footer" title="Footer" />
         </div>
-    </Fragment>
+    </SizePresetFrame>
 );

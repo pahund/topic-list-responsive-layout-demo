@@ -1,0 +1,26 @@
+.SizePresetFrame {
+    background-color: lightgrey;
+}
+
+.SizePresetFrame .main {
+   display: flex;
+}
+
+.SizePresetFrame .top {
+}
+
+.SizePresetFrame .left {
+}
+
+.SizePresetFrame .content {
+    background-color: white;
+}
+
+.SizePresetFrame .scrollbar {
+    background-color: silver;
+}
+
+.SizePresetFrame .right {
+}
+
+
