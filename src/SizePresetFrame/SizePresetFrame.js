@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import sizePresets from './sizePresets';
-import PropTypes from 'prop-types';
 import './SizePresetFrame.css';
 
 function renderOptions() {
@@ -11,25 +10,32 @@ function renderOptions() {
     ));
 }
 
+function calculateViewportWidth({ scrollbar, screen }) {
+    return scrollbar.active ? screen.width - scrollbar.width : screen.width;
+}
+
 class SizePresetFrame extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedSizePresetId: null
+            selectedSizePresetId: null,
+            fullHeight: false
         };
         this.selectPreset = this.selectPreset.bind(this);
+        this.toggleFullHeight = this.toggleFullHeight.bind(this);
     }
 
     selectPreset({ target: { value: selectedSizePresetId } }) {
-        console.log('[PH_LOG] id:', selectedSizePresetId); // PH_TODO
-        const sizePreset = sizePresets[selectedSizePresetId] || null;
-        console.log('[PH_LOG] size preset changed:', sizePreset); // PH_TODO
         this.setState({ selectedSizePresetId });
     }
 
+    toggleFullHeight() {
+        this.setState({ fullHeight: !this.state.fullHeight });
+    }
+
     render() {
-        const { selectedSizePresetId } = this.state;
-        const preset = sizePresets[selectedSizePresetId];
+        const { selectedSizePresetId, fullHeight } = this.state;
+        const preset = sizePresets[selectedSizePresetId] || null;
         return (
             <div className="SizePresetFrame">
                 <div className="top">
@@ -38,18 +44,30 @@ class SizePresetFrame extends Component {
                         <option>none</option>
                         {renderOptions()}
                     </select>
+                    <div className="spacer" />
+                    <label htmlFor="full-height">Full Height:</label>
+                    <input
+                        type="checkbox"
+                        id="full-height"
+                        onChange={this.toggleFullHeight}
+                        disabled={preset === null}
+                    />
                 </div>
                 <div className="main">
                     {preset && <div className="left" />}
-                    <div
+                    <iframe
                         className="content"
                         style={{
-                            width: preset && preset.screen.width,
-                            height: preset && preset.screen.height
+                            width: preset ? calculateViewportWidth(preset) : window.innerWidth,
+                            height: preset
+                                ? fullHeight
+                                    ? 'calc(100vh - 32px)'
+                                    : preset.screen.height
+                                : window.innerHeight,
+                            border: 0
                         }}
-                    >
-                        {this.props.children}
-                    </div>
+                        src="./main.html"
+                    />
                     {preset &&
                         preset.scrollbar.active && (
                             <div className="scrollbar" style={{ width: preset.scrollbar.width }} />
@@ -60,9 +78,5 @@ class SizePresetFrame extends Component {
         );
     }
 }
-
-SizePresetFrame.propTypes = {
-    children: PropTypes.node.isRequired
-};
 
 export default SizePresetFrame;

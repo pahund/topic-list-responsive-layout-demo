@@ -24,11 +24,6 @@
   --full-banner-height: 60px;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 0;
-}
-
 .App .Header {
   background-color: var(--color-nav);
   grid-area: header;
@@ -297,7 +292,7 @@ body {
       var(--main-content-height)
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header"
       ". . . . ."
       "superbanner superbanner superbanner superbanner superbanner"
@@ -339,7 +334,7 @@ body {
       var(--main-content-height)
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header"
       ". . . . ."
       ". superbanner superbanner superbanner ."
@@ -385,7 +380,7 @@ body {
       calc(var(--main-content-height) - var(--sky-height) + var(--fireplace-banner-height) + var(--gutter-height))
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header header header header header"
       ". . . . . . . . ."
       ". skyscraper-left superbanner superbanner superbanner superbanner superbanner skyscraper-right ."
@@ -422,7 +417,7 @@ body {
       calc(var(--main-content-height) - var(--sky-height) + var(--fireplace-banner-height) + var(--gutter-height))
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header header header header header"
       ". . . . . . . . ."
       ". skyscraper-left superbanner superbanner superbanner superbanner superbanner skyscraper-right ."

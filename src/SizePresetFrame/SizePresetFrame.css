@@ -3,10 +3,22 @@
 }
 
 .SizePresetFrame .main {
-   display: flex;
+    display: flex;
+    justify-content: center;
 }
 
 .SizePresetFrame .top {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SizePresetFrame .top > .spacer {
+    width: 16px;
+}
+.SizePresetFrame .top > label {
+    font-size: 0.7em;
+    margin-right: 4px;
 }
 
 .SizePresetFrame .left {
@@ -22,5 +34,3 @@
 
 .SizePresetFrame .right {
 }
-
-

@@ -97,17 +97,6 @@ export default {
             height: screen.laptop13.height
         }
     },
-    laptop15winEdge38: {
-        name: 'Laptop 15" Windows Edge 38',
-        scrollbar: {
-            active: true,
-            width: scrollbar.edge
-        },
-        screen: {
-            width: screen.laptop15.width,
-            height: screen.laptop15.height
-        }
-    },
     laptop13winIE11: {
         name: 'Laptop 13" Windows Internet Explorer 11',
         scrollbar: {
@@ -119,17 +108,6 @@ export default {
             height: screen.laptop13.height
         }
     },
-    laptop15winIE11: {
-        name: 'Laptop 15" Windows Internet Explorer 11',
-        scrollbar: {
-            active: true,
-            width: scrollbar.win
-        },
-        screen: {
-            width: screen.laptop15.width,
-            height: screen.laptop15.height
-        }
-    },
     laptop13macSafari11: {
         name: 'Laptop 13" MacOS Safari 11',
         scrollbar: {
@@ -139,6 +117,28 @@ export default {
         screen: {
             width: screen.laptop13.width,
             height: screen.laptop13.height
+        }
+    },
+    laptop15winEdge38: {
+        name: 'Laptop 15" Windows Edge 38',
+        scrollbar: {
+            active: true,
+            width: scrollbar.edge
+        },
+        screen: {
+            width: screen.laptop15.width,
+            height: screen.laptop15.height
+        }
+    },
+    laptop15winIE11: {
+        name: 'Laptop 15" Windows Internet Explorer 11',
+        scrollbar: {
+            active: true,
+            width: scrollbar.win
+        },
+        screen: {
+            width: screen.laptop15.width,
+            height: screen.laptop15.height
         }
     },
     laptop15macSafari11: {
