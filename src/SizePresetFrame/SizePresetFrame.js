@@ -29,13 +29,20 @@ function calculateViewportWidth({ scrollbar, screen }) {
     return scrollbar.active ? screen.width - scrollbar.width : screen.width;
 }
 
+function getInitialState() {
+    const selectedSizePresetId = localStorage.getItem('selectedSizePresetId') || null;
+    const fullHeightStr = localStorage.getItem('fullHeight');
+    const fullHeight = fullHeightStr === 'true';
+    return {
+        selectedSizePresetId,
+        fullHeight
+    };
+}
+
 class SizePresetFrame extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            selectedSizePresetId: null,
-            fullHeight: false
-        };
+        this.state = getInitialState();
         this.selectPreset = this.selectPreset.bind(this);
         this.toggleFullHeight = this.toggleFullHeight.bind(this);
         this.handleKeyboardShortcut = this.handleKeyboardShortcut.bind(this);
@@ -46,11 +53,14 @@ class SizePresetFrame extends Component {
     }
 
     selectPreset({ target: { value: selectedSizePresetId } }) {
+        localStorage.setItem('selectedSizePresetId', selectedSizePresetId);
         this.setState({ selectedSizePresetId });
     }
 
     toggleFullHeight() {
-        this.setState({ fullHeight: !this.state.fullHeight });
+        const fullHeight = !this.state.fullHeight;
+        localStorage.setItem('fullHeight', fullHeight);
+        this.setState({ fullHeight });
     }
 
     handleKeyboardShortcut({ code }) {
