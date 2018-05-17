@@ -36,7 +36,6 @@ module.exports = {
     },
 
     output: {
-        // Add /* filename */ comments to generated require()s in the output.
         pathinfo: true,
         filename: 'static/js/[name].js',
         publicPath,

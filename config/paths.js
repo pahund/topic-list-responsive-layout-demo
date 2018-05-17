@@ -14,7 +14,7 @@ function ensureSlash(p, needsSlash) {
     if (hasSlash && !needsSlash) {
         return p.substr(p, p.length - 1);
     } else if (!hasSlash && needsSlash) {
-        return `${path}/`;
+        return `${p}/`;
     }
     return p;
 }
