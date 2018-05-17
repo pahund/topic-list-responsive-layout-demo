@@ -1,0 +1,40 @@
+.SizePresetFrame {
+    background-color: lightgrey;
+}
+
+.SizePresetFrame .main {
+    display: flex;
+    justify-content: center;
+}
+
+.SizePresetFrame .top {
+    position: fixed;
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+.SizePresetFrame .top > .spacer {
+    width: 16px;
+}
+.SizePresetFrame .top > label {
+    font-size: 0.7em;
+    margin-right: 4px;
+}
+
+.SizePresetFrame .left {
+}
+
+.SizePresetFrame .content {
+    margin-top: 32px;
+    background-color: white;
+}
+
+.SizePresetFrame .scrollbar {
+    background-color: silver;
+}
+
+.SizePresetFrame .right {
+}

@@ -14,7 +14,7 @@
   --sky-wide-width: 300px;
   --sky-width: 160px;
   --sky-height: 600px;
-  --main-content-width: 772px;
+  --main-content-width: 752px;
   --main-content-height: 800px;
   --sidebar-width: 300px;
   --sidebar-height: 800px;
@@ -22,11 +22,6 @@
   --super-banner-height: 90px;
   --full-banner-width: 468px;
   --full-banner-height: 60px;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 0;
 }
 
 .App .Header {
@@ -297,7 +292,7 @@ body {
       var(--main-content-height)
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header"
       ". . . . ."
       "superbanner superbanner superbanner superbanner superbanner"
@@ -322,7 +317,7 @@ body {
 }
 
 /* Screen Size XL → 15" laptop */
-@media (min-width: 1290.02px) and (max-width: 1439.98px) {
+@media (min-width: 1290.02px) and (max-width: 1419.98px) {
   .App {
     display: grid;
     grid-template-columns:
@@ -339,7 +334,7 @@ body {
       var(--main-content-height)
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header"
       ". . . . ."
       ". superbanner superbanner superbanner ."
@@ -363,7 +358,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1719.98px) {
+@media (min-width: 1420px) and (max-width: 1699.98px) {
   .App {
     display: grid;
     grid-template-columns:
@@ -385,7 +380,7 @@ body {
       calc(var(--main-content-height) - var(--sky-height) + var(--fireplace-banner-height) + var(--gutter-height))
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header header header header header"
       ". . . . . . . . ."
       ". skyscraper-left superbanner superbanner superbanner superbanner superbanner skyscraper-right ."
@@ -400,7 +395,7 @@ body {
   }
 }
 
-@media (min-width: 1720px) {
+@media (min-width: 1700px) {
   .App {
     display: grid;
     grid-template-columns:
@@ -422,7 +417,7 @@ body {
       calc(var(--main-content-height) - var(--sky-height) + var(--fireplace-banner-height) + var(--gutter-height))
       var(--gutter-height)
       235px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header header header header header header"
       ". . . . . . . . ."
       ". skyscraper-left superbanner superbanner superbanner superbanner superbanner skyscraper-right ."
