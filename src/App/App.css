@@ -1,6 +1,9 @@
 :root {
   --gutter-width: 16px;
   --gutter-height: 16px;
+  --margin-width-m: 32px;
+  --margin-width-l: 64px;
+  --margin-width-xl: 16px;
   --color-ad: hotpink;
   --color-nav: lime;
   --color-main: turquoise;
@@ -152,11 +155,11 @@
   .App {
     display: grid;
     grid-template-columns:
-      32px
+      var(--margin-width-m)
       auto
       var(--gutter-width)
       auto
-      32px;
+      var(--margin-width-m);
     grid-template-rows:
       80px
       var(--gutter-height)
@@ -194,11 +197,11 @@
   .App {
     display: grid;
     grid-template-columns:
-      32px
+      var(--margin-width-m)
       auto
       var(--gutter-width)
       auto
-      32px;
+      var(--margin-width-m);
     grid-template-rows:
       80px
       var(--gutter-height)
@@ -236,11 +239,11 @@
   .App {
     display: grid;
     grid-template-columns:
-      32px
+      var(--margin-width-m)
       auto
       var(--gutter-width)
       auto
-      32px;
+      var(--margin-width-m);
     grid-template-rows:
       80px
       var(--gutter-height)
@@ -275,15 +278,15 @@
 }
 
 /* Screen Size L → tablet landscape, 13" laptop */
-@media (min-width: 1000.02px) and (max-width: 1290px) {
+@media (min-width: 1000.02px) and (max-width: 1300px) {
   .App {
     display: grid;
     grid-template-columns:
-      64px
+      var(--margin-width-l)
       auto
       var(--gutter-width)
       var(--sidebar-width)
-      64px;
+      var(--margin-width-l);
     grid-template-rows:
       80px
       var(--gutter-height)
@@ -316,40 +319,40 @@
   }
 }
 
-/* Screen Size XL → 15" laptop */
-@media (min-width: 1290.02px) and (max-width: 1419.98px) {
+/* Screen Size XL */
+@media (min-width: 1300.02px) and (max-width: 1420px) {
   .App {
     display: grid;
     grid-template-columns:
       auto
-      var(--main-content-width)
+      var(--sky-width)
+      var(--margin-width-xl)
+      auto
       var(--gutter-width)
       var(--sidebar-width)
+      var(--margin-width-xl)
+      var(--sky-width)
       auto;
     grid-template-rows:
       80px
       var(--gutter-height)
       var(--billboard-height)
       var(--gutter-height)
-      var(--main-content-height)
+      calc(var(--sky-height) - var(--billboard-height) - var(--gutter-height))
+      calc(var(--main-content-height) - var(--sky-height) + var(--billboard-height) + var(--gutter-height))
       var(--gutter-height)
       235px;
     grid-template-areas:
-      "header header header header header"
-      ". . . . ."
-      ". superbanner superbanner superbanner ."
-      ". . . . ."
-      ". main-content . sidebar ."
-      ". . . . ."
-      "footer footer footer footer footer";
+      "header header header header header header header header header"
+      ". . . . . . . . ."
+      ". skyscraper-left superbanner superbanner superbanner superbanner superbanner skyscraper-right ."
+      ". skyscraper-left . . . . . skyscraper-right ."
+      ". skyscraper-left . main-content . sidebar . skyscraper-right ."
+      ". . . main-content . sidebar . . ."
+      ". . . . . . . . ."
+      "footer footer footer footer footer footer footer footer footer";
   }
   .App .Sidebar2 {
-    display: none;
-  }
-  .App .SkyscraperLeft {
-    display: none;
-  }
-  .App .SkyscraperRight {
     display: none;
   }
   .App .Banner {
@@ -358,17 +361,18 @@
   }
 }
 
-@media (min-width: 1420px) and (max-width: 1699.98px) {
+/* Screen Size XXL → 15" laptop */
+@media (min-width: 1420.02px) and (max-width: 1699.98px) {
   .App {
     display: grid;
     grid-template-columns:
       auto
       var(--sky-width)
-      var(--gutter-width)
+      var(--margin-width-xl)
       var(--main-content-width)
       var(--gutter-width)
       var(--sidebar-width)
-      var(--gutter-width)
+      var(--margin-width-xl)
       var(--sky-width)
       auto;
     grid-template-rows:
@@ -401,11 +405,11 @@
     grid-template-columns:
       auto
       var(--sky-wide-width)
-      var(--gutter-width)
+      var(--margin-width-xl)
       var(--main-content-width)
       var(--gutter-width)
       var(--sidebar-width)
-      var(--gutter-width)
+      var(--margin-width-xl)
       var(--sky-wide-width)
       auto;
     grid-template-rows:
