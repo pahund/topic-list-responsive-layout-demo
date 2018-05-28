@@ -14,7 +14,8 @@
   .SizeIndicator .s,
   .SizeIndicator .m,
   .SizeIndicator .l,
-  .SizeIndicator .xl {
+  .SizeIndicator .xl,
+  .SizeIndicator .xxl {
     display: none;
   }
 }
@@ -27,7 +28,8 @@
   .SizeIndicator .xs,
   .SizeIndicator .m,
   .SizeIndicator .l,
-  .SizeIndicator .xl {
+  .SizeIndicator .xl,
+  .SizeIndicator .xxl {
     display: none;
   }
 }
@@ -40,33 +42,50 @@
   .SizeIndicator .xs,
   .SizeIndicator .s,
   .SizeIndicator .l,
-  .SizeIndicator .xl {
+  .SizeIndicator .xl,
+  .SizeIndicator .xxl {
     display: none;
   }
 }
 
 /* L (tablet landscape) */
-@media (min-width: 1000.02px) and (max-width: 1290px) {
+@media (min-width: 1000.02px) and (max-width: 1300px) {
   .SizeIndicator .l {
     display: block;
   }
   .SizeIndicator .xs,
   .SizeIndicator .s,
   .SizeIndicator .m,
-  .SizeIndicator .xl {
+  .SizeIndicator .xl,
+  .SizeIndicator .xxl {
     display: none;
   }
 }
 
-/* XL (desktop) */
-@media (min-width: 1290.02px) {
+/* XL (laptop) */
+@media (min-width: 1300.02px) and (max-width: 1420px) {
   .SizeIndicator .xl {
     display: block;
   }
   .SizeIndicator .xs,
   .SizeIndicator .s,
   .SizeIndicator .m,
-  .SizeIndicator .l {
+  .SizeIndicator .l,
+  .SizeIndicator .xxl {
+    display: none;
+  }
+}
+
+/* XXL (desktop) */
+@media (min-width: 1420.02px) {
+  .SizeIndicator .xxl {
+    display: block;
+  }
+  .SizeIndicator .xs,
+  .SizeIndicator .s,
+  .SizeIndicator .m,
+  .SizeIndicator .l,
+  .SizeIndicator .xl {
     display: none;
   }
 }

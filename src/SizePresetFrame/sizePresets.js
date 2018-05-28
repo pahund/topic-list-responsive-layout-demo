@@ -19,13 +19,21 @@ const screen = {
         width: 1024,
         height: 768
     },
-    laptop13: {
+    laptopS: {
         width: 1280,
         height: 800
     },
-    laptop15: {
+    laptopM: {
+        width: 1366,
+        height: 768
+    },
+    laptopL: {
         width: 1440,
         height: 900
+    },
+    fullHD: {
+        width: 1920,
+        height: 1080
     }
 };
 
@@ -37,7 +45,7 @@ const scrollbar = {
 
 export default {
     phoneS: {
-        name: 'Phone 4" [1]',
+        name: 'XS – Phone [1]',
         scrollbar: {
             active: false
         },
@@ -48,7 +56,7 @@ export default {
         }
     },
     phoneL: {
-        name: 'Phone 5.5" [2]',
+        name: 'XS – Large Phone [2]',
         scrollbar: {
             active: false
         },
@@ -59,7 +67,7 @@ export default {
         }
     },
     tabletS: {
-        name: 'Tablet 7" [3]',
+        name: 'S – Small Tablet [3]',
         scrollbar: {
             active: false
         },
@@ -70,7 +78,7 @@ export default {
         }
     },
     tabletLPort: {
-        name: 'Tablet 9.7" Portrait [4]',
+        name: 'M – Tablet Portrait [4]',
         scrollbar: {
             active: false
         },
@@ -81,7 +89,7 @@ export default {
         }
     },
     tabletLLand: {
-        name: 'Tablet 9.7" Landscape [5]',
+        name: 'L – Tablet Landscape [5]',
         scrollbar: {
             active: false
         },
@@ -91,75 +99,147 @@ export default {
             fullHeight: 1413
         }
     },
-    laptop13winIE: {
-        name: 'Laptop 13" Windows Internet Explorer [6]',
+    laptopSWinIE: {
+        name: 'L – Small Laptop Windows Internet Explorer [6]',
         scrollbar: {
             active: true,
             width: scrollbar.win
         },
         screen: {
-            width: screen.laptop13.width,
-            height: screen.laptop13.height,
+            width: screen.laptopS.width,
+            height: screen.laptopS.height,
             fullHeight: 1413
         }
     },
-    laptop13macSafari: {
-        name: 'Laptop 13" MacOS Safari [7]',
+    laptopSMacSafari: {
+        name: 'L – Small Laptop MacOS Safari',
         scrollbar: {
             active: true,
             width: scrollbar.mac
         },
         screen: {
-            width: screen.laptop13.width,
-            height: screen.laptop13.height,
+            width: screen.laptopS.width,
+            height: screen.laptopS.height,
             fullHeight: 1413
         }
     },
-    laptop13winEdge: {
-        name: 'Laptop 13" Windows Edge [8]',
+    laptopSWinEdge: {
+        name: 'L – Small Laptop Windows Edge',
         scrollbar: {
             active: true,
             width: scrollbar.edge
         },
         screen: {
-            width: screen.laptop13.width,
-            height: screen.laptop13.height,
+            width: screen.laptopS.width,
+            height: screen.laptopS.height,
             fullHeight: 1413
         }
     },
-    laptop15winIE: {
-        name: 'Laptop 15" Windows Internet Explorer [9]',
+    laptopMWinIE: {
+        name: 'XL – Medium Laptop Windows Internet Explorer [7]',
         scrollbar: {
             active: true,
             width: scrollbar.win
         },
         screen: {
-            width: screen.laptop15.width,
-            height: screen.laptop15.height,
-            fullHeight: 1253
+            width: screen.laptopM.width,
+            height: screen.laptopM.height,
+            fullHeight: 1413
         }
     },
-    laptop15macSafari: {
-        name: 'Laptop 15" MacOS Safari [0]',
+    laptopMMacSafari: {
+        name: 'XL – Medium Laptop MacOS Safari',
         scrollbar: {
             active: true,
             width: scrollbar.mac
         },
         screen: {
-            width: screen.laptop15.width,
-            height: screen.laptop15.height,
-            fullHeight: 1253
+            width: screen.laptopM.width,
+            height: screen.laptopM.height,
+            fullHeight: 1413
         }
     },
-    laptop15winEdge: {
-        name: 'Laptop 15" Windows Edge [ß]',
+    laptopMWinEdge: {
+        name: 'XL – Medium Laptop Windows Edge',
         scrollbar: {
             active: true,
             width: scrollbar.edge
         },
         screen: {
-            width: screen.laptop15.width,
-            height: screen.laptop15.height,
+            width: screen.laptopM.width,
+            height: screen.laptopM.height,
+            fullHeight: 1413
+        }
+    },
+    laptopLWinIE: {
+        name: 'XXL – Large Laptop Windows Internet Explorer [8]',
+        scrollbar: {
+            active: true,
+            width: scrollbar.win
+        },
+        screen: {
+            width: screen.laptopL.width,
+            height: screen.laptopL.height,
+            fullHeight: 1253
+        }
+    },
+    laptopLMacSafari: {
+        name: 'XXL – Large Laptop MacOS Safari',
+        scrollbar: {
+            active: true,
+            width: scrollbar.mac
+        },
+        screen: {
+            width: screen.laptopL.width,
+            height: screen.laptopL.height,
+            fullHeight: 1253
+        }
+    },
+    laptopLWinEdge: {
+        name: 'XXL – Large Laptop Windows Edge',
+        scrollbar: {
+            active: true,
+            width: scrollbar.edge
+        },
+        screen: {
+            width: screen.laptopL.width,
+            height: screen.laptopL.height,
+            fullHeight: 1253
+        }
+    },
+    fullHDWinIE: {
+        name: 'XXL – Full HD Windows Internet Explorer [9]',
+        scrollbar: {
+            active: true,
+            width: scrollbar.win
+        },
+        screen: {
+            width: screen.fullHD.width,
+            height: screen.fullHD.height,
+            fullHeight: 1253
+        }
+    },
+    fullHDMacSafari: {
+        name: 'XXL – Full HD MacOS Safari',
+        scrollbar: {
+            active: true,
+            width: scrollbar.mac
+        },
+        screen: {
+            width: screen.fullHD.width,
+            height: screen.fullHD.height,
+            fullHeight: 1253
+        }
+    },
+    fullHDWinEdge: {
+        name: 'XXL – Full HD Windows Edge',
+        scrollbar: {
+            active: true,
+            width: scrollbar.edge
+        },
+        screen: {
+            width: screen.fullHD.width,
+            height: screen.fullHD.height,
             fullHeight: 1253
         }
     }

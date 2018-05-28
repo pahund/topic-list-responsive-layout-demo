@@ -8,13 +8,11 @@ const keyboardShortcuts = {
     Digit3: 'tabletS',
     Digit4: 'tabletLPort',
     Digit5: 'tabletLLand',
-    Digit6: 'laptop13winIE',
-    Digit7: 'laptop13macSafari',
-    Digit8: 'laptop13winEdge',
-    Digit9: 'laptop15winIE',
-    Digit0: 'laptop15macSafari',
-    Minus: 'laptop15winEdge',
-    IntlBackslash: null
+    Digit6: 'laptopSWinIE',
+    Digit7: 'laptopMWinIE',
+    Digit8: 'laptopLWinIE',
+    Digit9: 'fullHDWinIE',
+    Digit0: null
 };
 
 function renderOptions() {
@@ -64,7 +62,7 @@ class SizePresetFrame extends Component {
     }
 
     handleKeyboardShortcut({ code }) {
-        if (code === 'Equal') {
+        if (code === 'IntlBackslash') {
             if (this.state.selectedSizePresetId) {
                 this.toggleFullHeight();
             }
@@ -88,7 +86,7 @@ class SizePresetFrame extends Component {
                 <div className="top">
                     <label htmlFor="preset">Size Preset:</label>
                     <select id="preset" onChange={this.selectPreset} value={selectedSizePresetId || ''}>
-                        <option>none [^]</option>
+                        <option>none [0]</option>
                         {renderOptions()}
                     </select>
                     <div className="spacer" />
