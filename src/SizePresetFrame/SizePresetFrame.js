@@ -102,9 +102,10 @@ class SizePresetFrame extends Component {
                 <div className="main">
                     {preset && <div className="left" />}
                     <iframe
+                        width={preset ? undefined : '100%'}
                         className="content"
                         style={{
-                            width: preset ? calculateViewportWidth(preset) : window.innerWidth,
+                            width: preset ? calculateViewportWidth(preset) : undefined,
                             height: preset ? (fullHeight ? preset.screen.fullHeight : preset.screen.height) : 3000,
                             border: 0
                         }}
