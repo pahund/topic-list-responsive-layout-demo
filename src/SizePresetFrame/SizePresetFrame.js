@@ -48,6 +48,10 @@ class SizePresetFrame extends Component {
 
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyboardShortcut);
+        window.addEventListener(
+            'message',
+            ({ data }) => data.type === 'iframe-keydown' && this.handleKeyboardShortcut(data)
+        );
     }
 
     selectPreset({ target: { value: selectedSizePresetId } }) {
