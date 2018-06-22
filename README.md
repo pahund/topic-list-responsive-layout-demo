@@ -3,7 +3,7 @@
 A small demo application showing how various screen sized affect the layout of the 
 [topic list page on MOTOR-TALK](https://www.motor-talk.de/forum/bmw-b4.html).
 
-<big>👉 **[View the demo here](https://pages.github.corp.ebay.com/MT/topic-list-responsive-layout-demo/)**</big>
+<big>👉 **[View the demo here](https://pahund.github.io/topic-list-responsive-layout-demo/)**</big>
 
 ## Development
 
