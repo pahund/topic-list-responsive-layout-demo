@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import sizePresets from './sizePresets';
 import './SizePresetFrame.css';
 
+const frameModes = ['demo', 'topiclist'];
+
+const sourceUrls = {
+    demo: './main.html',
+    topiclist: 'http://localhost:3000/forum/audi-a4-b9-b962.html?feature.resi=1&pmtest=1497345885'
+};
+
 const keyboardShortcuts = {
     Digit1: 'phoneS',
     Digit2: 'phoneL',
@@ -23,17 +30,22 @@ function renderOptions() {
     ));
 }
 
-function calculateViewportWidth({ scrollbar, screen }) {
+function calculateViewportWidth({ scrollbar, screen }, frameMode) {
+    if (frameMode !== 'demo') {
+        return screen.width;
+    }
     return scrollbar.active ? screen.width - scrollbar.width : screen.width;
 }
 
 function getInitialState() {
     const selectedSizePresetId = localStorage.getItem('selectedSizePresetId') || null;
     const fullHeightStr = localStorage.getItem('fullHeight');
+    const frameMode = localStorage.getItem('frameMode');
     const fullHeight = fullHeightStr === 'true';
     return {
         selectedSizePresetId,
-        fullHeight
+        fullHeight,
+        frameMode
     };
 }
 
@@ -59,6 +71,13 @@ class SizePresetFrame extends Component {
         this.setState({ selectedSizePresetId });
     }
 
+    cycleFrameMode() {
+        const currentIndex = frameModes.indexOf(this.state.frameMode);
+        const frameMode = frameModes[currentIndex === frameModes.length - 1 ? 0 : currentIndex + 1];
+        localStorage.setItem('frameMode', frameMode);
+        this.setState({ frameMode });
+    }
+
     toggleFullHeight() {
         const fullHeight = !this.state.fullHeight;
         localStorage.setItem('fullHeight', fullHeight);
@@ -72,6 +91,10 @@ class SizePresetFrame extends Component {
             }
             return;
         }
+        if (code === 'KeyM') {
+            this.cycleFrameMode();
+            return;
+        }
         const selectedSizePresetId = keyboardShortcuts[code];
         if (selectedSizePresetId === undefined) {
             return;
@@ -83,7 +106,7 @@ class SizePresetFrame extends Component {
     }
 
     render() {
-        const { selectedSizePresetId, fullHeight } = this.state;
+        const { selectedSizePresetId, fullHeight, frameMode } = this.state;
         const preset = sizePresets[selectedSizePresetId] || null;
         return (
             <div className="SizePresetFrame">
@@ -109,13 +132,14 @@ class SizePresetFrame extends Component {
                         width={preset ? undefined : '100%'}
                         className="content"
                         style={{
-                            width: preset ? calculateViewportWidth(preset) : undefined,
+                            width: preset ? calculateViewportWidth(preset, frameMode) : undefined,
                             height: preset ? (fullHeight ? preset.screen.fullHeight : preset.screen.height) : 3000,
                             border: 0
                         }}
-                        src="./main.html"
+                        src={sourceUrls[frameMode]}
                     />
-                    {preset &&
+                    {frameMode === 'demo' &&
+                        preset &&
                         preset.scrollbar.active && (
                             <div className="scrollbar" style={{ width: preset.scrollbar.width }} />
                         )}
