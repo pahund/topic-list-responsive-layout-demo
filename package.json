@@ -3,11 +3,11 @@
   "version": "1.1.2",
   "description": "A small demo application showing how various screen sized affect the layout of the topic list page on MOTOR-TALK",
   "keywords": [],
-  "homepage": "https://pages.github.corp.ebay.com/MT/topic-list-responsive-layout-demo",
+  "homepage": "https://pahund.github.io/topic-list-responsive-layout-demo",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.corp.ebay.com/MT/topic-list-responsive-layout-demo"
+    "url": "https://github.com/pahund/topic-list-responsive-layout-demo"
   },
   "license": "WTFPL",
   "dependencies": {
