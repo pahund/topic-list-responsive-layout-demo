@@ -1,5 +1,6 @@
 :root {
   --gutter-width: 16px;
+  --gutter-width-sidebar: 40px;
   --gutter-height: 16px;
   --margin-width-m: 32px;
   --margin-width-l: 64px;
@@ -17,7 +18,7 @@
   --sky-wide-width: 300px;
   --sky-width: 160px;
   --sky-height: 600px;
-  --main-content-width: 752px;
+  --main-content-width: 738px;
   --main-content-height: 800px;
   --sidebar-width: 300px;
   --sidebar-height: 800px;
@@ -284,7 +285,7 @@
     grid-template-columns:
       var(--margin-width-l)
       auto
-      var(--gutter-width)
+      var(--gutter-width-sidebar)
       var(--sidebar-width)
       var(--margin-width-l);
     grid-template-rows:
@@ -328,7 +329,7 @@
       var(--sky-width)
       var(--margin-width-xl)
       auto
-      var(--gutter-width)
+      var(--gutter-width-sidebar)
       var(--sidebar-width)
       var(--margin-width-xl)
       var(--sky-width)
@@ -370,7 +371,7 @@
       var(--sky-width)
       var(--margin-width-xl)
       var(--main-content-width)
-      var(--gutter-width)
+      var(--gutter-width-sidebar)
       var(--sidebar-width)
       var(--margin-width-xl)
       var(--sky-width)
@@ -407,7 +408,7 @@
       var(--sky-wide-width)
       var(--margin-width-xl)
       var(--main-content-width)
-      var(--gutter-width)
+      var(--gutter-width-sidebar)
       var(--sidebar-width)
       var(--margin-width-xl)
       var(--sky-wide-width)
